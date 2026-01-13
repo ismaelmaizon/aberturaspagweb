@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* globals.css o un archivo CSS */
+.text-shadow-custom {
+  /* x, y, blur, color */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* globals.css o un archivo CSS */
+.text-shadow-title {
+  /* x, y, blur, color */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}

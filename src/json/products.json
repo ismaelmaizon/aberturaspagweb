@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "nombre": "Puerta de Cedro Premium",
+    "descripcion": "Puerta maciza de cedro estacionado, terminación fina y gran durabilidad.",
+    "urlImagen": ""
+  },
+  {
+    "id": 2,
+    "nombre": "Ventana de Aluminio Línea Módena",
+    "descripcion": "Ventana corrediza de aluminio anodizado con doble vidrio hermético.",
+    "urlImagen": ""
+  },
+  {
+    "id": 3,
+    "nombre": "Puerta Placard Corredera",
+    "descripcion": "Sistema corredizo suave, ideal para dormitorios y vestidores.",
+    "urlImagen": ""
+  },
+  {
+    "id": 4,
+    "nombre": "Ventanal de Hierro Industrial",
+    "descripcion": "Ventanal estilo industrial con pintura epoxi negra.",
+    "urlImagen": ""
+  },
+  {
+    "id": 5,
+    "nombre": "Puerta de Pinotea Restaurada",
+    "descripcion": "Hoja de pinotea reciclada, lijada y barnizada para un acabado rústico.",
+    "urlImagen": ""
+  },
+  {
+    "id": 6,
+    "nombre": "Mosquitero Enrollable",
+    "descripcion": "Mosquitero enrollable vertical con estructura de aluminio.",
+    "urlImagen": ""
+  },
+  {
+    "id": 7,
+    "nombre": "Puerta de Chapa Inyectada",
+    "descripcion": "Puerta exterior reforzada, aislación poliuretánica y doble chapa.",
+    "urlImagen": ""
+  },
+  {
+    "id": 8,
+    "nombre": "Ventana de PVC Rehau",
+    "descripcion": "Ventana oscilobatiente con excelente aislamiento térmico y acústico.",
+    "urlImagen": ""
+  },
+  {
+    "id": 9,
+    "nombre": "Puerta Vaivén de Cocina",
+    "descripcion": "Puerta doble vaivén con bisagras tipo saloon, ideal para cocinas comerciales.",
+    "urlImagen": ""
+  },
+  {
+    "id": 10,
+    "nombre": "Marcos de Madera para Puertas",
+    "descripcion": "Juego de marcos de madera dura listos para instalar.",
+    "urlImagen": ""
+  }
+]
