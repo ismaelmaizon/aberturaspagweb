@@ -23,9 +23,9 @@ function classNames(...classes: string[]) {
 export default function Navbar() {
 
   const images = [
-    { src: "/img/carousel1.jpeg", alt: "Imagen 1" },
-    { src: "/img/GDSF5132.jpeg", alt: "Imagen 2" },
-    { src: "/img/carousel3.jpeg", alt: "Imagen 3" }
+    { src: "/web/img/carousel1.jpeg", alt: "Imagen 1" },
+    { src: "/web/img/GDSF5132.jpeg", alt: "Imagen 2" },
+    { src: "/web/img/carousel3.jpeg", alt: "Imagen 3" }
   ]
 
   const pathname = usePathname();
