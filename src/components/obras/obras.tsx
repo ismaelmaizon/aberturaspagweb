@@ -6,8 +6,8 @@ import ImageCarousel from "../imageCarousel/imageCarousel";
 
 export default function Obras() {
     const images = [
-    { src: "/img/COL CDOBLE (1).png", alt: "Imagen 2" },
-    { src: "/img/COLPDOBLE.png", alt: "Imagen 2" },
+    { src: "/web/img/COL CDOBLE (1).png", alt: "Imagen 2" },
+    { src: "/web/img/COLPDOBLE.png", alt: "Imagen 2" },
 ]
   return (
     <div className="max-w-auto m-auto" >

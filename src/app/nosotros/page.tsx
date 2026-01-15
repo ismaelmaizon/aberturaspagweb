@@ -83,7 +83,7 @@ export default function NosotrosPage() {
               <div className="relative overflow-hidden rounded-3xl border border-neutral-200 bg-white shadow-sm">
                 <div className="relative aspect-[16/10] w-full">
                   <Image
-                    src="/nosotros/nosotros1.png"
+                    src="/web/nosotros/nosotros1.png"
                     alt="Trabajo en madera - aberturas"
                     fill
                     className="object-cover"
@@ -180,7 +180,7 @@ export default function NosotrosPage() {
               <div className="relative overflow-hidden rounded-3xl border border-neutral-200 bg-white shadow-sm">
                 <div className="relative aspect-[16/9] w-full">
                   <Image
-                    src="/nosotros/nosotros4.jpeg"
+                    src="/web/nosotros/nosotros4.jpeg"
                     alt="Instalación y ajustes finales"
                     fill
                     className="object-cover"

@@ -13,7 +13,7 @@ const works: Work[] = [
       "La colocación de una puerta colonial de cedro añade un toque clásico y refinado a cualquier espacio, destacándose por su elegancia atemporal y su robustez.",
     bullets: ["Replanteo y fabricación a medida", "Instalación con nivelación fina", "Sellados y terminación premium"],
     meta: { location: "Córdoba", type: "Residencial", year: "2025" },
-    image: { src: "/obras/colcdoble.png", alt: "Aberturas de madera en vivienda" },
+    image: { src: "/web/obras/colcdoble.png", alt: "Aberturas de madera en vivienda" },
   },
   {
     title: "COL PDOBLE",
@@ -21,7 +21,7 @@ const works: Work[] = [
       "El diseño colonial de la puerta se caracteriza por detalles tradicionales y molduras ornamentales que evocan el estilo clásico, aportando un aire de sofisticación y distinción a la entrada.",
     bullets: ["Recuperación y tratamiento", "Ajustes de cierre", "Protección y acabado"],
     meta: { location: "Villa Allende", type: "Restauración", year: "2024" },
-    image: { src: "/obras/colpdoble.png", alt: "Restauración de aberturas de madera" },
+    image: { src: "/web/obras/colpdoble.png", alt: "Restauración de aberturas de madera" },
   },
   {
     title: "COLOCACIÓN 1",
@@ -29,7 +29,7 @@ const works: Work[] = [
       "La colocación de esta puerta colonial de cedro es un proceso preciso, ya que su estructura está diseñada para encajar perfectamente en vanos existentes,garantizando una instalación estable y segura.",
     bullets: ["Medición y asesoramiento", "Colocación y ajuste", "Revisión final con el cliente"],
     meta: { location: "Carlos Paz", type: "Residencial", year: "2025" },
-    image: { src: "/obras/colocacion1.png", alt: "Ventanas corredizas de madera" },
+    image: { src: "/web/obras/colocacion1.png", alt: "Ventanas corredizas de madera" },
   },
   {
     title: "PDOBLE 3",
@@ -37,7 +37,7 @@ const works: Work[] = [
       "La puerta de madera de pinotea es una opción ideal para quienes buscan una estética cálida y natural. Sus vetas y su acabado natural le otorgan un carácter único.",
     bullets: ["Diseño y propuesta", "Fabricación", "Instalación y calibración"],
     meta: { location: "Córdoba", type: "A medida", year: "2023" },
-    image: { src: "/obras/pdoble3.png", alt: "Puerta principal de madera" },
+    image: { src: "/web/obras/pdoble3.png", alt: "Puerta principal de madera" },
   },
 ];
 
