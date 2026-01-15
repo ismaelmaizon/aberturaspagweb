@@ -2,7 +2,11 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   /* config options here */
-  basePath: "/web",
+  basePath: '/web',
+  images: {
+    unoptimized: true,
+  },
 };
 
 export default nextConfig;
+
