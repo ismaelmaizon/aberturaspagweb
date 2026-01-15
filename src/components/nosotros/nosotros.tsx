@@ -13,7 +13,7 @@ export default function Nosotros() {
           overflow-hidden
         ">
         <Image
-          src="/img/biuj635.jpeg" // cambiala por tu imagen
+          src="/web/img/biuj635.jpeg" // cambiala por tu imagen
           alt="Nosotros - Aberturas Bodereau"
           fill
           className="object-cover border-solid shadow-lg "

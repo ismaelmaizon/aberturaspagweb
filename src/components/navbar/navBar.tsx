@@ -41,7 +41,7 @@ export default function Navbar() {
         <div className="absolute inset-0 bg-black/40 ">
           <ImageCarousel images={images} autoPlay={true} interval={4000} className={'w-full h-50'}  />
           {
-          // <Image src="/img/GDSF5132.jpeg" alt="Fondo" fill style={{ objectFit: "cover", opacity: 0.7 }} />
+          // <Image src="/web/img/GDSF5132.jpeg" alt="Fondo" fill style={{ objectFit: "cover", opacity: 0.7 }} />
           }
         </div> {/* oscurece la imagen opcional 
         <div className="relative z-10 text-white p-4 flex flex-row items-center justify-between h-full">
@@ -49,7 +49,7 @@ export default function Navbar() {
             <h1 className="text-white text-4xl font-bold">Aberturas Bodereau</h1>
             <h3 className="text-white text-sm font-large">Calidad, tradición y confianza: abrimos tus ideas, creamos tus espacios.</h3>
           </div>
-          <Image className="mr-5 hidden sm:block" src="/img/logopag.png" alt="Logo" width={50} height={50} />
+          <Image className="mr-5 hidden sm:block" src="/web/img/logopag.png" alt="Logo" width={50} height={50} />
         </div> */}
       </div>
       <Disclosure
@@ -70,7 +70,7 @@ export default function Navbar() {
             <div className="flex flex-1 items-center justify-center sm:justify-start">
               <div className="flex shrink-0 items-center block sm:hidden">
                 <Image
-                  src="/img/logoAB.png" // ruta de la imagen de tu logo
+                  src="/web/img/logoAB.png" // ruta de la imagen de tu logo
                   alt="Logo"
                   className="h-30 w-auto"
                   width={100}

@@ -59,7 +59,7 @@ export default function Home() {
         <motion.div {...fadeUp} className="text-center">
           <Image
             className="mx-auto hidden sm:block"
-            src="/img/logoAB.png"
+            src="/web/img/logoAB.png"
             alt="Logo"
             width={300}
             height={80}
@@ -134,7 +134,7 @@ export default function Home() {
                 <div className="relative overflow-hidden rounded-3xl border border-neutral-200 bg-white shadow-sm">
                   <div className="relative aspect-square w-full">
                     <Image
-                      src="/img/newProduct.jpg"
+                      src="/web/img/newProduct.jpg"
                       alt="Producto Nuevo"
                       fill
                       className="object-cover"
@@ -175,13 +175,13 @@ export default function Home() {
                   <h1 className="mt-2 text-2xl font-semibold tracking-tight text-neutral-900 sm:text-4xl">Asesoramiento Personalizado</h1> 
                 </div> {/* Options */} 
                 <div className="mt-5 lg:row-span-3 lg:mt-0 grid grid-cols-3 gap-y-15 gap-x-2"> 
-                  <Image src="/img/asesoramientoPersonalizado3.jpeg" // ruta de la imagen de tu logo 
+                  <Image src="/web/img/asesoramientoPersonalizado3.jpeg" // ruta de la imagen de tu logo 
                   alt="AsesoramientoPersonalizado" className="w-auto h-100 rounded-lg bg-gray-100 object-cover" width={200} height={40} 
                   /> 
-                  <Image src="/img/asesoramientoPersonalizado2.jpeg" // ruta de la imagen de tu logo 
+                  <Image src="/web/img/asesoramientoPersonalizado2.jpeg" // ruta de la imagen de tu logo 
                   alt="AsesoramientoPersonalizado" className="w-auto h-100 rounded-lg bg-gray-100 object-cover" width={150} height={40} 
                   /> 
-                  <Image src="/img/asesoramientoPersonalizado.jpeg" // ruta de la imagen de tu logo 
+                  <Image src="/web/img/asesoramientoPersonalizado.jpeg" // ruta de la imagen de tu logo 
                   alt="AsesoramientoPersonalizado" className="w-auto h-100 rounded-lg bg-gray-100 object-cover" width={150} height={40} 
                   /> 
                 </div> 
@@ -255,7 +255,7 @@ export default function Home() {
                 <div className="relative overflow-hidden rounded-3xl border border-neutral-200 bg-white shadow-sm">
                   <div className="relative aspect-square w-full">
                     <Image
-                      src="/img/Catalogo2026.png"
+                      src="/web/img/Catalogo2026.png"
                       alt="Catálogo"
                       fill
                       className="object-cover"

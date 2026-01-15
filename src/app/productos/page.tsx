@@ -142,7 +142,7 @@ export default function ProductosPage() {
             viewport={{ once: true, amount: 0.2 }} // once=true: solo 1 vez; amount: cuánto debe entrar en pantalla
           transition={{ duration: 0.8 }}
         >
-          <Image className="m-auto hidden sm:block" src="/img/logoAB.png" alt="Logo" width={300} height={10} />
+          <Image className="m-auto hidden sm:block" src="/web/img/logoAB.png" alt="Logo" width={300} height={10} />
           {/* Header */}
           <div className="mb-8">
             <p className="text-sm font-medium tracking-wide text-neutral-500">

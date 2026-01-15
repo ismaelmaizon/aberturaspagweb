@@ -33,7 +33,7 @@ export default function ContactanosPage() {
         transition={{ duration: 0.8 }}
       >
         <div className="mx-auto max-w-6xl px-4 py-4 sm:px-6 sm:py-4">
-          <Image className="m-auto hidden sm:block" src="/img/logoAB.png" alt="Logo" width={300} height={10} />
+          <Image className="m-auto hidden sm:block" src="/web/img/logoAB.png" alt="Logo" width={300} height={10} />
           {/* Header */}
           <header className="max-w-3xl">
             <p className="text-sm font-medium tracking-wide text-neutral-500">
