@@ -25,7 +25,7 @@ export default function Home() {
 
   const descargarPDF = async () => {
     try {
-      const response = await fetch("/api/catalogo");
+      const response = await fetch("/web/api/catalogo");
       const blob = await response.blob();
 
       const url = window.URL.createObjectURL(blob);
