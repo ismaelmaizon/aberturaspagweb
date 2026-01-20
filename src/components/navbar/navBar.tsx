@@ -73,10 +73,10 @@ export default function Navbar() {
 
         {/* CONTENIDO ENCIMA DEL HERO */}
         <div className={`
-    relative z-10 text-white p-4 flex flex-row items-start justify-start h-full
-    transition-all duration-500 ease-out
-    ${scrolled ? 'mt-40 opacity-0' : 'mt-10 opacity-100'}
-  `}>
+            relative z-10 text-white p-4 flex flex-row items-start justify-start h-full
+            transition-all duration-500 ease-out
+            ${scrolled ? 'mt-40 opacity-0' : 'mt-10 opacity-100'}
+          `}>
           <Image
             className="mr-5 hidden sm:block"
             src="/web/img/logopag.png"
@@ -85,12 +85,12 @@ export default function Navbar() {
             height={50}
           />
           <div className="ml-5 mt-2">
-            <h1 className="text-white text-4xl font-bold">
+            <h1 className="text-white text-5xl md:text-6xl font-light tracking-tight">
               Aberturas Bodereau
             </h1>
-            <h3 className="text-white text-sm font-large">
-              Calidad, tradición y confianza: abrimos tus ideas, creamos tus espacios.
-            </h3>
+            <p className="text-white text-sm md:text-base font-light opacity-60 mt-1">
+              Calidad, tradición y confianza.
+            </p>
           </div>
         </div>
       </div>
@@ -98,7 +98,7 @@ export default function Navbar() {
       {/* NAVBAR FIJO CON ANIMACIÓN SUAVE */}
       <div
         className={`fixed top-0 left-0 right-0 z-20
-          bg-red-950/100 ${scrolled ? 'opacity-100' : 'opacity-70'}
+          bg-red-900/100 ${scrolled ? 'opacity-100' : 'opacity-70'}
           after:pointer-events-none after:absolute after:inset-x-0 after:bottom-0 after:h-px after:bg-white/10
           transition-transform duration-500 ease-out
         `}
@@ -114,17 +114,17 @@ export default function Navbar() {
                 <DisclosureButton className="group relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-white/5 hover:text-white focus:outline-2 focus:-outline-offset-1 focus:outline-indigo-500">
                   <span className="absolute -inset-0.5" />
                   <span className="sr-only">Open main menu</span>
-                  <Bars3Icon aria-hidden="true" className="text-black block size-6 group-data-open:hidden" />
-                  <XMarkIcon aria-hidden="true" className="text-black hidden size-6 group-data-open:block" />
+                  <Bars3Icon aria-hidden="true" className="text-white block size-6 group-data-open:hidden" />
+                  <XMarkIcon aria-hidden="true" className="text-white hidden size-6 group-data-open:block" />
                 </DisclosureButton>
               </div>
 
               <div className="flex flex-1 items-center justify-center sm:justify-start">
                 <div className="flex shrink-0 items-center block sm:hidden">
                   <Image
-                    src="/web/img/logoAB.png"
+                    src="/web/img/logoAberturasBodereau.png"
                     alt="Logo"
-                    className="h-30 w-auto"
+                    className="h-40 w-auto"
                     width={100}
                     height={50}
                   />

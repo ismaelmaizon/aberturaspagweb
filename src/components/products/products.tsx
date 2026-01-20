@@ -47,23 +47,23 @@ export default function Products() {
 
 
   const getMateriales = async () => {
-    const res = await fetch("/api/products/getMateriales")
+    const res = await fetch("/web/api/products/getMateriales")
     const data = await res.json()
     setMateriales(data.materiales)
   }
   const getTipos = async () => {
-    const res = await fetch("/api/products/getTipos")
+    const res = await fetch("/web/api/products/getTipos")
     const data = await res.json()
     setTipos(data.tipos)
   }
   const getAtributos = async () => {
-    const res = await fetch("/api/products/getAtributos")
+    const res = await fetch("/web/api/products/getAtributos")
     const data = await res.json()
     setAtributos(data.atributos)
   }
 
   useEffect(() => {
-    fetch(`/api/products/getProducts?page=${page}&limit=${itemsPerPage}`)
+    fetch(`/web/api/products/getProducts?page=${page}&limit=${itemsPerPage}`)
       .then(res => res.json())
       .then(data => {
         console.log("Productos cargados:", data)
@@ -138,7 +138,7 @@ export default function Products() {
                           <div className="relative w-full h-90 bg-gray-100">
                               <Image
                               alt={product.nombre}
-                              src={product.urlImagen}
+                              src={`/web/${product.urlImagen}`}
                               fill
                               className="object-cover mx-auto rounded-lg bg-gray-100"
                             />
