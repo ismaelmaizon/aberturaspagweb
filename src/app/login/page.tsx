@@ -20,6 +20,7 @@ export default function LoginPage() {
     });
 
     const data = await res.json();
+    console.log(data);
 
     if (!res.ok) {
       setMensaje(data.message || "Error al iniciar sesión");
@@ -28,7 +29,7 @@ export default function LoginPage() {
 
     setMensaje("Login correcto ✅");
     // acá podrías hacer: router.push("/admin/productos") etc.
-    router.push("/addProductos");
+    router.push("/web/addProductos");
   }
 
   return (
