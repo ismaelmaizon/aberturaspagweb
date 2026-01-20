@@ -54,7 +54,7 @@ export default function ImageCarousel({images, autoPlay, interval, className}: I
   return (
     <div className={`relative w-full overflow-hidden bg-black/5 ${className}`}>
       {/* CONTENEDOR DE SLIDES */}
-      <div className={`relative w-full aspect-[16/9] ${className} `}>
+      <div className={`relative w-full h-full`}>
         {images.map((image, index) => (
           <div
             key={image.src}

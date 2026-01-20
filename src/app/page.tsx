@@ -8,6 +8,7 @@ import Products from "./../components/products/products";
 import Nosotros from "./../components/nosotros/nosotros";
 import Obras from "../components/obras/obras";
 
+
 const fadeUp = {
   initial: { opacity: 0, y: 24 },
   whileInView: { opacity: 1, y: 0 },
@@ -22,6 +23,7 @@ export default function Home() {
     const enlace = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(mensaje)}`;
     window.open(enlace, "_blank");
   };
+
 
   const descargarPDF = async () => {
     try {
@@ -283,6 +285,7 @@ export default function Home() {
         </motion.div>
       </div>
     </div>
+
   );
 }
 
