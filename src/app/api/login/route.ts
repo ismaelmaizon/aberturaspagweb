@@ -53,13 +53,17 @@ export async function POST(req: Request) {
 
     const res = NextResponse.json({ ok: true });
 
-    // Setear cookie httpOnly
+    const isProd = process.env.NODE_ENV === "production";
+
+    // Si NO tenés HTTPS en el dominio de producción, dejá esto en false.
+    const useSecureCookies = false; // cambiar a true cuando tengas https
+
     res.cookies.set("token", token, {
       httpOnly: true,
-      secure: process.env.NODE_ENV === "production",
+      secure: useSecureCookies,
       sameSite: "lax",
       path: "/",
-      maxAge: 60 * 60 * 24, // 1 día
+      maxAge: 60 * 60 * 24,
     });
 
     return res;

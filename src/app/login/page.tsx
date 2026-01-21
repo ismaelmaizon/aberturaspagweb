@@ -29,7 +29,7 @@ export default function LoginPage() {
 
     setMensaje("Login correcto ✅");
     // acá podrías hacer: router.push("/admin/productos") etc.
-    router.push("/web/addProductos");
+    router.push("/addProductos");
   }
 
   return (
