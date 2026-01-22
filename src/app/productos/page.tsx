@@ -263,7 +263,7 @@ export default function ProductosPage() {
                   <div className="relative w-full h-90 bg-gray-100">
                     <Image
                       alt={product.nombre}
-                      src={`/web/${product.urlImagen}`}
+                      src={`/web${product.urlImagen}`}
                       fill
                       className="object-cover mx-auto rounded-lg bg-gray-100"
                     />
