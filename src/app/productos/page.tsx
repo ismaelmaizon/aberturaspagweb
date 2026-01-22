@@ -45,19 +45,19 @@ export default function ProductosPage() {
   const atributoById = useMemo(() => new Map(atributos.map(a => [a.id, a])), [atributos]);
 
   const getMateriales = async () => {
-    const res = await fetch("/api/products/getMateriales");
+    const res = await fetch("/web/api/products/getMateriales");
     const data = await res.json();
     setMateriales(data.materiales ?? []);
   };
 
   const getTipos = async () => {
-    const res = await fetch("/api/products/getTipos");
+    const res = await fetch("/web/api/products/getTipos");
     const data = await res.json();
     setTipos(data.tipos ?? []);
   };
 
   const getAtributos = async () => {
-    const res = await fetch("/api/products/getAtributos");
+    const res = await fetch("/web/api/products/getAtributos");
     const data = await res.json();
     setAtributos(data.atributos ?? []);
   };
@@ -89,7 +89,7 @@ export default function ProductosPage() {
         if (tipoId !== "all") qs.set("tipo", String(tipoId));
         if (materialId !== "all") qs.set("material", String(materialId));
 
-        const res = await fetch(`/api/products/getProducts?${qs.toString()}`, {
+        const res = await fetch(`/web/api/products/getProducts?${qs.toString()}`, {
           signal: controller.signal,
         });
 
@@ -256,16 +256,16 @@ export default function ProductosPage() {
               return (
                 <div
                   key={product.id}
-                  className="group overflow-hidden rounded-3xl border border-neutral-200 bg-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
-                >
+                  className="group h-full overflow-hidden rounded-xl border border-black/10 bg-white
+                          transition-all duration-300 hover:shadow-lg hover:scale-[1.02]
+                          flex flex-col" >
                   {/* Imagen */}
-                  <div className="relative aspect-[4/3] w-full bg-neutral-100">
+                  <div className="relative w-full h-90 bg-gray-100">
                     <Image
                       alt={product.nombre}
-                      src={product.urlImagen}
+                      src={`/web/${product.urlImagen}`}
                       fill
-                      className="object-cover"
-                      sizes="(max-width: 640px) 100vw, 25vw"
+                      className="object-cover mx-auto rounded-lg bg-gray-100"
                     />
                     <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/20 via-black/0 to-black/0" />
                   </div>
@@ -289,7 +289,7 @@ export default function ProductosPage() {
                     <button
                       type="button"
                       onClick={() => handleCotizar(product)}
-                      className="mt-4 inline-flex w-full items-center justify-center rounded-xl bg-neutral-900 px-4 py-2 text-sm font-medium text-white shadow-sm transition hover:opacity-90 active:scale-95 active:translate-y-[1px]"
+                      className="mt-4 inline-flex w-full items-center justify-center rounded-xl bg-red-950/100 px-4 py-2 text-sm font-medium text-white shadow-sm transition hover:opacity-90 active:scale-95 active:translate-y-[1px]"
                     >
                       Cotizar
                     </button>

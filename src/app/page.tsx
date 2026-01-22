@@ -7,6 +7,7 @@ import { Boxes, DoorClosed, MessageCircle, ShieldCheck, Truck } from "lucide-rea
 import Products from "./../components/products/products";
 import Nosotros from "./../components/nosotros/nosotros";
 import Obras from "../components/obras/obras";
+import ImageCarousel from "../components/imageCarousel/imageCarousel";
 
 
 const fadeUp = {
@@ -17,6 +18,11 @@ const fadeUp = {
 };
 
 const WHATSAPP_NUMBER = "5493517641942";
+
+const images = [
+    { src: "/web/img/PuertasDobles1.jpeg", alt: "Imagen 1" },
+    { src: "/web/img/PuertasDobles2.jpeg", alt: "Imagen 2" }
+    ];
 
 export default function Home() {
   const sendWsp = (mensaje: string) => {
@@ -103,70 +109,6 @@ export default function Home() {
         </motion.div>
       </div>
 
-      {/* NUEVO PRODUCTO */}
-      <div className="mx-auto max-w-6xl px-4 py-6 sm:px-6 sm:py-10">
-        <motion.div {...fadeUp}>
-          <div className="bg-white p-5 shadow-sm sm:p-8">
-            <div className="grid items-center gap-8 lg:grid-cols-2">
-              <div>
-                <p className="text-sm font-medium tracking-wide text-neutral-500">Destacado</p>
-                <h2 className="mt-2 text-2xl font-semibold tracking-tight text-neutral-900 sm:text-4xl">
-                  Nuevo producto
-                </h2>
-                <p className="mt-4 text-sm leading-relaxed text-neutral-600 sm:text-base">
-                  Las puertas talladas en madera son una opción clásica y elegante que aporta un toque de distinción
-                  a cualquier espacio. Con una cuidadosa labor artesanal, cada puerta es única, con detalles intrincados
-                  y patrones que resaltan la belleza natural de la madera.
-                </p>
-
-                <button
-                onClick={() =>
-                      sendWsp(
-                        "Hola! Quisiera consultar por las puertas talladas. Me gustaría coordinar una visita / presupuesto."
-                      )
-                    }
-                  className="mt-6 hidden rounded-xl bg-green-500 px-5 py-2.5 text-sm font-medium text-white shadow-sm transition hover:opacity-90 active:scale-95 active:translate-y-[1px] sm:inline-flex"
-                >
-                 <MessageCircle className="h-4 w-4 mr-2" />
-                  Cotizar
-                </button>
-              </div>
-
-              <div className="mx-auto w-full max-w-sm">
-                <div className="relative overflow-hidden rounded-3xl border border-neutral-200 bg-white shadow-sm">
-                  <div className="relative aspect-square w-full">
-                    <Image
-                      src="/web/img/newProduct.jpg"
-                      alt="Producto Nuevo"
-                      fill
-                      className="object-cover"
-                      sizes="(max-width: 640px) 100vw, 40vw"
-                    />
-                  </div>
-                </div>
-
-                <button
-                onClick={() =>
-                      sendWsp(
-                        "Hola! Quisiera consultar por las puertas talladas. Me gustaría coordinar una visita / presupuesto."
-                      )
-                    }
-                  className="mt-6 inline-flex w-full items-center justify-center rounded-xl bg-green-500 px-5 py-2.5 text-sm font-medium text-white shadow-sm transition hover:opacity-90 active:scale-95 active:translate-y-[1px] sm:hidden"
-                >
-                  <MessageCircle className="h-4 w-4 mr-2" />
-                  Cotizar
-                </button>
-              </div>
-            </div>
-          </div>
-        </motion.div>
-      </div>
-
-      {/* Productos (tu componente) */}
-      <div className="mx-auto max-w-6xl px-4 py-6 sm:px-6 sm:py-10">
-        <Products />
-      </div>
-
       {/* ASESORAMIENTO */}
       <div className="mx-auto max-w-6xl px-4 py-6 sm:px-6 sm:py-10">
         <motion.div {...fadeUp}>
@@ -203,6 +145,64 @@ export default function Home() {
                 </div> 
               </div> 
             </div> 
+          </div>
+        </motion.div>
+      </div>
+
+      {/* Productos (tu componente) */}
+      <div className="mx-auto max-w-6xl px-4 py-6 sm:px-6 sm:py-10">
+        <Products />
+      </div>
+
+      {/* NUEVO PRODUCTO */}
+      <div className="mx-auto max-w-6xl px-4 py-6 sm:px-6 sm:py-10">
+        <motion.div {...fadeUp}>
+          <div className="bg-white p-5 shadow-sm sm:p-8">
+            <div className="grid items-center gap-8 lg:grid-cols-2">
+              <div>
+                <p className="text-sm font-medium tracking-wide text-neutral-500">Productos destacados</p>
+                <h2 className="mt-2 text-2xl font-semibold tracking-tight text-neutral-900 sm:text-4xl">
+                  Puertas Dobles
+                </h2>
+                <p className="mt-4 text-sm leading-relaxed text-neutral-600 sm:text-base">
+                  Las puertas Dobles en madera son una opción clásica y elegante que aporta un toque de distinción
+                  a cualquier espacio. Con una cuidadosa labor artesanal, cada puerta es única, con detalles intrincados
+                  y patrones que resaltan la belleza natural de la madera.
+                </p>
+
+                <button
+                onClick={() =>
+                      sendWsp(
+                        "Hola! Quisiera consultar por las puertas dobles. Me gustaría coordinar una visita / presupuesto."
+                      )
+                    }
+                  className="mt-6 hidden rounded-xl bg-green-500 px-5 py-2.5 text-sm font-medium text-white shadow-sm transition hover:opacity-90 active:scale-95 active:translate-y-[1px] sm:inline-flex"
+                >
+                 <MessageCircle className="h-4 w-4 mr-2" />
+                  Cotizar
+                </button>
+              </div>
+
+              <div className="mx-auto w-full max-w-sm">
+                <div className="relative overflow-hidden rounded-3xl border border-neutral-200 bg-white shadow-sm">
+                  <div className="relative aspect-square w-full">
+                    <ImageCarousel images={images} autoPlay={true} interval={5000} className={'m-auto w-full h-60 md:h-120 '}  />
+                  </div>
+                </div>
+
+                <button
+                onClick={() =>
+                      sendWsp(
+                        "Hola! Quisiera consultar por las puertas dobles. Me gustaría coordinar una visita / presupuesto."
+                      )
+                    }
+                  className="mt-6 inline-flex w-full items-center justify-center rounded-xl bg-green-500 px-5 py-2.5 text-sm font-medium text-white shadow-sm transition hover:opacity-90 active:scale-95 active:translate-y-[1px] sm:hidden"
+                >
+                  <MessageCircle className="h-4 w-4 mr-2" />
+                  Cotizar
+                </button>
+              </div>
+            </div>
           </div>
         </motion.div>
       </div>
