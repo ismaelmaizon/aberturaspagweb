@@ -45,19 +45,19 @@ export default function ProductosPage() {
   const atributoById = useMemo(() => new Map(atributos.map(a => [a.id, a])), [atributos]);
 
   const getMateriales = async () => {
-    const res = await fetch("/web/api/products/getMateriales");
+    const res = await fetch("/api/products/getMateriales");
     const data = await res.json();
     setMateriales(data.materiales ?? []);
   };
 
   const getTipos = async () => {
-    const res = await fetch("/web/api/products/getTipos");
+    const res = await fetch("/api/products/getTipos");
     const data = await res.json();
     setTipos(data.tipos ?? []);
   };
 
   const getAtributos = async () => {
-    const res = await fetch("/web/api/products/getAtributos");
+    const res = await fetch("/api/products/getAtributos");
     const data = await res.json();
     setAtributos(data.atributos ?? []);
   };
@@ -89,7 +89,7 @@ export default function ProductosPage() {
         if (tipoId !== "all") qs.set("tipo", String(tipoId));
         if (materialId !== "all") qs.set("material", String(materialId));
 
-        const res = await fetch(`/web/api/products/getProducts?${qs.toString()}`, {
+        const res = await fetch(`/api/products/getProducts?${qs.toString()}`, {
           signal: controller.signal,
         });
 
@@ -142,7 +142,7 @@ export default function ProductosPage() {
             viewport={{ once: true, amount: 0.2 }} // once=true: solo 1 vez; amount: cuánto debe entrar en pantalla
           transition={{ duration: 0.8 }}
         >
-          <Image className="m-auto hidden sm:block" src="/web/img/logoAB.png" alt="Logo" width={300} height={10} />
+          <Image className="m-auto hidden sm:block" src="/img/logoAB.png" alt="Logo" width={300} height={10} />
           {/* Header */}
           <div className="mb-8">
             <p className="text-sm font-medium tracking-wide text-neutral-500">

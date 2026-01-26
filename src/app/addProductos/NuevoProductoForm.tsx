@@ -34,7 +34,7 @@ export default function NuevoProductoForm() {
 
     const formData = new FormData(e.currentTarget);
     
-    const res = await fetch("/web/api/products/addProducts", {
+    const res = await fetch("/api/products/addProducts", {
       method: "POST",
       body: formData,
     });
@@ -53,17 +53,17 @@ export default function NuevoProductoForm() {
 
   useEffect(() => {
     async function fetchMateriales() {
-      const res = await fetch("/web/api/products/getMateriales");
+      const res = await fetch("/api/products/getMateriales");
       const data = await res.json();
       setMateriales(data.materiales);
     }
     async function fetchTipos() {
-      const res = await fetch("/web/api/products/getTipos");
+      const res = await fetch("/api/products/getTipos");
       const data = await res.json();
       setTipos(data.tipos);
     }
     async function fetchAtributos() {
-      const res = await fetch("/web/api/products/getAtributos");
+      const res = await fetch("/api/products/getAtributos");
       const data = await res.json();
       setAtributos(data.atributos);
     }

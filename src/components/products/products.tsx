@@ -47,23 +47,23 @@ export default function Products() {
 
 
   const getMateriales = async () => {
-    const res = await fetch("/web/api/products/getMateriales")
+    const res = await fetch("/api/products/getMateriales")
     const data = await res.json()
     setMateriales(data.materiales)
   }
   const getTipos = async () => {
-    const res = await fetch("/web/api/products/getTipos")
+    const res = await fetch("/api/products/getTipos")
     const data = await res.json()
     setTipos(data.tipos)
   }
   const getAtributos = async () => {
-    const res = await fetch("/web/api/products/getAtributos")
+    const res = await fetch("/api/products/getAtributos")
     const data = await res.json()
     setAtributos(data.atributos)
   }
 
   useEffect(() => {
-    fetch(`/web/api/products/getProducts?page=${page}&limit=${itemsPerPage}`)
+    fetch(`/api/products/getProducts?page=${page}&limit=${itemsPerPage}`)
       .then(res => res.json())
       .then(data => {
         console.log("Productos cargados:", data)

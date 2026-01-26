@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: "Aberturas Bodereau",
   description: "Sitio web de aberturas", 
   icons: {
-    icon: "/web/img/logopag.png",
+    icon: "/img/logopag.png",
   },
 };
 

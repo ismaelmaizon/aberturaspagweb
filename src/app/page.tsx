@@ -20,8 +20,8 @@ const fadeUp = {
 const WHATSAPP_NUMBER = "5493517641942";
 
 const images = [
-    { src: "/web/img/PuertasDobles1.jpeg", alt: "Imagen 1" },
-    { src: "/web/img/PuertasDobles2.jpeg", alt: "Imagen 2" }
+    { src: "/img/PuertasDobles1.jpeg", alt: "Imagen 1" },
+    { src: "/img/PuertasDobles2.jpeg", alt: "Imagen 2" }
     ];
 
 export default function Home() {
@@ -33,7 +33,7 @@ export default function Home() {
 
   const descargarPDF = async () => {
     try {
-      const response = await fetch("/web/api/catalogo");
+      const response = await fetch("/api/catalogo");
       const blob = await response.blob();
 
       const url = window.URL.createObjectURL(blob);
@@ -67,7 +67,7 @@ export default function Home() {
         <motion.div {...fadeUp} className="text-center">
           <Image
             className="mx-auto hidden sm:block"
-            src="/web/img/logoAB.png"
+            src="/img/logoAB.png"
             alt="Logo"
             width={300}
             height={80}
@@ -119,13 +119,13 @@ export default function Home() {
                   <h1 className="mt-2 text-2xl font-semibold tracking-tight text-neutral-900 sm:text-4xl">Asesoramiento Personalizado</h1> 
                 </div> {/* Options */} 
                 <div className="mt-5 lg:row-span-3 lg:mt-0 grid grid-cols-3 gap-y-15 gap-x-2"> 
-                  <Image src="/web/img/asesoramientoPersonalizado3.jpeg" // ruta de la imagen de tu logo 
+                  <Image src="/img/asesoramientoPersonalizado3.jpeg" // ruta de la imagen de tu logo 
                   alt="AsesoramientoPersonalizado" className="w-auto h-100 rounded-lg bg-gray-100 object-cover" width={200} height={40} 
                   /> 
-                  <Image src="/web/img/asesoramientoPersonalizado2.jpeg" // ruta de la imagen de tu logo 
+                  <Image src="/img/asesoramientoPersonalizado2.jpeg" // ruta de la imagen de tu logo 
                   alt="AsesoramientoPersonalizado" className="w-auto h-100 rounded-lg bg-gray-100 object-cover" width={150} height={40} 
                   /> 
-                  <Image src="/web/img/asesoramientoPersonalizado.jpeg" // ruta de la imagen de tu logo 
+                  <Image src="/img/asesoramientoPersonalizado.jpeg" // ruta de la imagen de tu logo 
                   alt="AsesoramientoPersonalizado" className="w-auto h-100 rounded-lg bg-gray-100 object-cover" width={150} height={40} 
                   /> 
                 </div> 
@@ -257,7 +257,7 @@ export default function Home() {
                 <div className="relative overflow-hidden rounded-3xl border border-neutral-200 bg-white shadow-sm">
                   <div className="relative aspect-square w-full">
                     <Image
-                      src="/web/img/Catalogo2026.png"
+                      src="/img/Catalogo2026.png"
                       alt="Catálogo"
                       fill
                       className="object-cover"

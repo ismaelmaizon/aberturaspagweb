@@ -27,9 +27,9 @@ function classNames(...classes: string[]) {
 
 export default function Navbar() {
   const images = [
-    { src: "/web/img/carousel1.jpeg", alt: "Imagen 1" },
-    { src: "/web/img/GDSF5132.jpeg", alt: "Imagen 2" },
-    { src: "/web/img/carousel3.jpeg", alt: "Imagen 3" }
+    { src: "/img/carousel1.jpeg", alt: "Imagen 1" },
+    { src: "/img/GDSF5132.jpeg", alt: "Imagen 2" },
+    { src: "/img/carousel3.jpeg", alt: "Imagen 3" }
   ];
 
   const pathname = usePathname();
@@ -79,7 +79,7 @@ export default function Navbar() {
           `}>
           <Image
             className="mr-5 hidden sm:block"
-            src="/web/img/logopag.png"
+            src="/img/logopag.png"
             alt="Logo"
             width={50}
             height={50}
@@ -122,7 +122,7 @@ export default function Navbar() {
               <div className="flex flex-1 items-center justify-center sm:justify-start">
                 <div className="flex shrink-0 items-center block sm:hidden">
                   <Image
-                    src="/web/img/logoAberturasBodereau.png"
+                    src="/img/logoAberturasBodereau.png"
                     alt="Logo"
                     className="h-40 w-auto"
                     width={100}
