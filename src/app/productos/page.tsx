@@ -110,7 +110,7 @@ export default function ProductosPage() {
   }, [page, itemsPerPage, tipoId, materialId]);
 
   const sendWsp = (mensaje: string) => {
-    const numeroWhatsApp = `5493517641942`;
+    const numeroWhatsApp = `5493516312848`;
     const enlaceWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensaje)}`;
     window.open(enlaceWhatsApp, "_blank");
   };

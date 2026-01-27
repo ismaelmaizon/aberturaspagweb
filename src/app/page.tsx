@@ -17,7 +17,7 @@ const fadeUp = {
   transition: { duration: 0.7 },
 };
 
-const WHATSAPP_NUMBER = "5493517641942";
+const WHATSAPP_NUMBER = "5493516312848";
 
 const images = [
     { src: "/img/PuertasDobles1.jpeg", alt: "Imagen 1" },
@@ -136,8 +136,8 @@ export default function Home() {
                           son diferentes: Recomendaciones según el estilo arquitectónico, hasta la instalación final, brindando: 
                           Selección del tipo de madera ideal para tu proyecto. Opciones de acabado, protección y herrajes. Resolución de dudas técnico durante toda la obra.</p> 
                     </div> 
-                    <div className="mt-5"> 
-                      <Chip>Comunicación clara</Chip> 
+                    <div className="flex flex-wrap gap-2 mt-5 sm:mt-5"> 
+                      <Chip>Comunicación clara</Chip>
                       <Chip>Te acompañamos en cada paso del proceso</Chip> 
                       <Chip>Definimos lo mejor para vos</Chip> 
                     </div> 
@@ -186,7 +186,7 @@ export default function Home() {
               <div className="mx-auto w-full max-w-sm">
                 <div className="relative overflow-hidden rounded-3xl border border-neutral-200 bg-white shadow-sm">
                   <div className="relative aspect-square w-full">
-                    <ImageCarousel images={images} autoPlay={true} interval={5000} className={'m-auto w-full h-60 md:h-120 '}  />
+                    <ImageCarousel images={images} autoPlay={true} interval={5000} className={'m-auto w-full h-96 md:h-120'}  />
                   </div>
                 </div>
 

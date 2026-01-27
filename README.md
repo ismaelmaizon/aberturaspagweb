@@ -18,9 +18,9 @@ bun dev
 
 const sendWsp = async (mensaje : string) => {
       // Número de WhatsApp al que se enviará el mensaje
-      //const numeroWhatsApp = '+5493517641942';
+      //const numeroWhatsApp = '+5493516312848';
       
-      const numeroWhatsApp = `5493517641942` ;
+      const numeroWhatsApp = `5493516312848` ;
       // Construir el enlace de WhatsApp
       const enlaceWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensaje)}`;
 

@@ -76,9 +76,9 @@ export default function Products() {
 
   const sendWsp = async (mensaje : string) => {
       // Número de WhatsApp al que se enviará el mensaje
-      //const numeroWhatsApp = '+5493517641942';
+      //const numeroWhatsApp = '+5493516312848';
       
-      const numeroWhatsApp = `5493517641942` ;
+      const numeroWhatsApp = `5493516312848` ;
       // Construir el enlace de WhatsApp
       const enlaceWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensaje)}`;
 
@@ -122,7 +122,7 @@ export default function Products() {
           </select>
         </div>
             {!loading ? <Ellipsis /> : 
-              <div className="grid grid-cols-2 gap-x-6 gap-y-10 group relative rounded-lg border border-gray-300/70 p-4 bg-white 
+              <div className="grid grid-cols-1 gap-x-6 gap-y-10 group relative rounded-lg border border-gray-300/70 p-4 bg-white 
               shadow-sm sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
                 {
                 products.map((product: Product) => {

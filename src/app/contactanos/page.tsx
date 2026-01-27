@@ -4,7 +4,7 @@
 import { Mail, MapPin, Phone, Clock, MessageCircle } from "lucide-react";
 import Image from "next/image";
 
-const WHATSAPP_NUMBER = "5493517641942"; // tu número
+const WHATSAPP_NUMBER = "5493516312848"; // tu número
 const GOOGLE_MAPS_EMBED_URL = "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d219.39253549890697!2d-64.28865944102235!3d-31.325525336687374!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2s!5e1!3m2!1ses-419!2sar!4v1767663143684!5m2!1ses-419!2sar" ;
 
 
