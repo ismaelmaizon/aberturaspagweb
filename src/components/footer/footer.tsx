@@ -28,10 +28,10 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold text-white mb-2">Redes Sociales</h3>
             <ul className="space-y-1 text-sm">
-              <li>🔗 Facebook</li>
-              <li>🔗 Instagram</li>
-              <li>🔗 WhatsApp</li>
-            </ul>
+              <li> <a href="https://www.facebook.com/share/1TnBW36eci/" target="_blank" rel="noopener noreferrer">🔗 Facebook</a></li>
+              <li> <a href="https://www.instagram.com/aberturas.bodereau?igsh=MW9wcno2bm50NmY4Mg==" target="_blank" rel="noopener noreferrer">🔗 Instagram</a></li>
+              <li> <a href="https://wa.me/5493516312848?text=Hola, estoy interesado/a en sus productos" target="_blank" rel="noopener noreferrer">🔗 WhatsApp</a></li>
+            </ul> 
           </div>
         </div>
 
