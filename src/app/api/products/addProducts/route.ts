@@ -6,22 +6,17 @@ import { requireAdmin } from "../../../../utils/auth";
 
 
 export async function POST(req: Request) {
-  // Verificar si el usuario es admin
+  // PROTEGER SOLO ADMIN (UNA SOLA VEZ)
   const user = await requireAdmin();
   if (!user) {
-    return NextResponse.json({ message: "No autorizado" }, { status: 401 });
+    return NextResponse.json(
+      { ok: false, message: "No autorizado" },
+      { status: 401 }
+    );
   }
 
   try {
     
-    // 🔐 PROTEGER SOLO ADMIN
-    const user = requireAdmin();
-    if (!user) {
-      return NextResponse.json(
-        { ok: false, message: "No autorizado" },
-        { status: 401 }
-      );
-    }
     console.log("Llegó una solicitud POST a /api/addProducts");
 
     const formData = await req.formData();

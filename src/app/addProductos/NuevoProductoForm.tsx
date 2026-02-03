@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-
+import Swal from 'sweetalert2';
 
 type Material = {
   id: number;
@@ -20,6 +20,7 @@ type Atributos = {
 
 export default function NuevoProductoForm() {
 
+  const [imagen, setImagen] = useState<File | null>(null);
   const [materiales, setMateriales] = useState<Material[]>([]);
   const [tipos, setTipos] = useState<Tipo[]>([]);
   const [atributos, setAtributos] = useState<Atributos[]>([]);
@@ -41,17 +42,29 @@ export default function NuevoProductoForm() {
 
     if (!res.ok) {
       const error = await res.json().catch(() => ({}));
-      setMensaje(error?.message || "Error al guardar el producto");
+      console.log(error);
+      Swal.fire({
+        title: "¡Problemas al crear el producto!",
+        icon: "error",
+        timer: 2000
+      });
     } else {
       const data = await res.json();
-      setMensaje(`Producto creado: ${data.nombre}`);
-      e.currentTarget.reset();
+      console.log(data);
+      Swal.fire({
+        title: "¡Producto creado!",
+        icon: "success",
+        timer: 2000
+      }).then((result) => {
+        window.location.reload();
+        e.currentTarget.reset();
+      });
     }
 
     setLoading(false);
   }
 
-  useEffect(() => {
+  useEffect( () => {
     async function fetchMateriales() {
       const res = await fetch("/api/products/getMateriales");
       const data = await res.json();
@@ -67,6 +80,7 @@ export default function NuevoProductoForm() {
       const data = await res.json();
       setAtributos(data.atributos);
     }
+ 
     fetchMateriales();
     fetchTipos();
     fetchAtributos();
@@ -165,38 +179,48 @@ export default function NuevoProductoForm() {
           </select>
         </div>
 
-        <div>
+        <div className="flex flex-col gap-2">
           <label
             htmlFor="imagen"
-            className="
+            className={`
               inline-block
-              bg-gray-400
-              text-white
-              px-4
-              py-2
+              px-4 py-2
               rounded
               cursor-pointer
               transition
               duration-150
               ease-in-out
+              text-white
 
-              hover:bg-gray-700
+              ${imagen ? "bg-green-600 hover:bg-green-700" : "bg-gray-400 hover:bg-gray-700"}
+
               active:scale-95
               active:translate-y-[5px]
               active:shadow-inner
-            "
+            `}
           >
-            Seleccionar imagen
+            {imagen ? "Imagen cargada ✔️" : "Seleccionar imagen"}
           </label>
 
-          <input
+              <input
             id="imagen"
             name="imagen"
             type="file"
             accept="image/*"
             required
             className="hidden"
+            onChange={(e) => {
+              if (e.target.files && e.target.files[0]) {
+                setImagen(e.target.files[0]);
+              }
+            }}
           />
+
+          {imagen && (
+            <p className="text-sm text-gray-600">
+              📎 {imagen.name}
+            </p>
+          )}
         </div>
         <button
           type="submit"

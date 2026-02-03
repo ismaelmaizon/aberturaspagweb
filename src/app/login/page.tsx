@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import Swal from 'sweetalert2';
+
 
 export default function LoginPage() {
   const router = useRouter();
@@ -23,24 +25,32 @@ export default function LoginPage() {
     console.log(data);
 
     if (!res.ok) {
-      setMensaje(data.message || "Error al iniciar sesión");
+      Swal.fire({
+        title: "algo salió mal",
+        icon: "error",
+        timer: 1000
+      });
       return;
     }
 
-    setMensaje("Login correcto ✅");
+    Swal.fire({
+      title: "¡Bienvenido Admin!",
+      icon: "success",
+      timer: 1000
+    });
     // acá podrías hacer: router.push("/admin/productos") etc.
     router.push("/addProductos");
   }
 
   return (
-    <div className="max-w-sm mx-auto mt-10 p-6 border rounded-lg">
+    <div className="max-w-sm mx-auto mt-10 p-6 border border-neutral-200 rounded-lg">
       <h1 className="text-xl font-bold mb-4">Login Admin</h1>
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>
           <label className="block text-sm mb-1">Email</label>
           <input
             type="email"
-            className="w-full border px-3 py-2 rounded"
+            className="w-full border border-neutral-400 px-3 py-2 rounded"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
@@ -50,7 +60,7 @@ export default function LoginPage() {
           <label className="block text-sm mb-1">Contraseña</label>
           <input
             type="password"
-            className="w-full border px-3 py-2 rounded"
+            className="w-full border border-neutral-400 px-3 py-2 rounded"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />

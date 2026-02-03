@@ -6,17 +6,19 @@ export type AuthUser = {
   role: string;
 };
 
-export async function getUserFromCookies(): Promise<AuthUser | null> {
-  const cookieStore = await cookies();
-  const token = cookieStore.get("token")?.value;
+async function  getToken(): Promise<string | null>{
+  return (await cookies()).get("token")?.value ?? null;
+}
 
+export async function getUserFromCookies(): Promise<AuthUser | null> {
+  const token = await getToken();
   if (!token) return null;
 
   try {
     const decoded = jwt.verify(
       token,
       process.env.JWT_SECRET as string
-    ) as AuthUser;
+    ) as unknown as AuthUser;
     return decoded;
   } catch (err) {
     console.error("Error verificando token:", err);
@@ -25,14 +27,8 @@ export async function getUserFromCookies(): Promise<AuthUser | null> {
 }
 
 export async function requireAdmin(): Promise<AuthUser | null> {
-  const token = (await cookies()).get("token")?.value;
-  if (!token) return null;
-
-  try {
-    const decoded = jwt.verify(token, process.env.JWT_SECRET!) as AuthUser;
-    if (decoded.role !== "admin") return null;
-    return decoded;
-  } catch {
-    return null;
-  }
+  const user = await getUserFromCookies();
+  if (!user) return null;
+  if (user.role !== "admin") return null;
+  return user;
 }

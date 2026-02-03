@@ -260,12 +260,12 @@ export default function ProductosPage() {
                           transition-all duration-300 hover:shadow-lg hover:scale-[1.02]
                           flex flex-col" >
                   {/* Imagen */}
-                  <div className="relative w-full h-90 bg-gray-100">
+                  <div className="relative w-full h-90 ">
                     <Image
                       alt={product.nombre}
                       src={product.urlImagen}
                       fill
-                      className="object-cover mx-auto rounded-lg bg-gray-100"
+                      className="object-cover mx-auto rounded-lg "
                     />
                     <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/20 via-black/0 to-black/0" />
                   </div>

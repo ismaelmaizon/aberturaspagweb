@@ -32,7 +32,14 @@ export async function POST(req: Request) {
     );
 
     const user = rows[0];
+    if (!user) {
+      return NextResponse.json({ ok: false, message: "Credenciales inválidas" }, { status: 401 });
+    }
+
     const esValido = await bcrypt.compare(password, user.password_hash);
+    if (!esValido) {
+      return NextResponse.json({ ok: false, message: "Credenciales inválidas" }, { status: 401 });
+    }
 
     if (email !== user.email || !esValido) {
       return NextResponse.json(
@@ -45,7 +52,7 @@ export async function POST(req: Request) {
     const token = jwt.sign(
       {
         email,
-        role: "admin",
+        role: user.role,
       },
       process.env.JWT_SECRET as string,
       { expiresIn: "1d" } // 1 día
