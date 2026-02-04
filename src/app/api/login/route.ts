@@ -4,7 +4,7 @@ import jwt from "jsonwebtoken";
 import { db } from "../../../utils/conectDB";
 import bcrypt from "bcryptjs";
 import { RowDataPacket } from "mysql2";
-import { requireAdmin } from "../../../utils/auth";
+import { requireAdmin } from "../../../utils/auth.server";
 
 type DbUser = {
   id: number;

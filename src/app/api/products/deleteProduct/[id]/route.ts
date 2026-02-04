@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { db } from "../../../../../utils/conectDB";
-import { requireAdmin } from "../../../../../utils/auth";
+import { requireAdmin } from "../../../../../utils/auth.server";
 
 
 export async function DELETE(

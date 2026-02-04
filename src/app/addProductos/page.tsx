@@ -1,13 +1,11 @@
 import { redirect } from "next/navigation";
-import { requireAdmin } from "../../utils/auth"; // ajustá el path según tu estructura
 import NuevoProductoForm from "./NuevoProductoForm";
+import { requireAdmin } from "@/src/utils/auth.server";
 
 export default async function NuevoProductoPage() {
-  // 🔐 Esto corre en el servidor ANTES de renderizar nada
-  const user = await requireAdmin();
+  const user = requireAdmin;
 
   if (!user) {
-    // si no está logueado o no es admin, lo mandamos a /login
     redirect("/login");
   }
 

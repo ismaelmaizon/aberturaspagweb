@@ -1,24 +1,18 @@
-import { cookies } from "next/headers";
 import jwt from "jsonwebtoken";
+import { cookies } from "next/headers";
 
 export type AuthUser = {
   email: string;
   role: string;
 };
 
-async function  getToken(): Promise<string | null>{
-  return (await cookies()).get("token")?.value ?? null;
-}
-
 export async function getUserFromCookies(): Promise<AuthUser | null> {
-  const token = await getToken();
+  const cookieStore = await cookies();
+  const token = cookieStore.get("token")?.value;
   if (!token) return null;
 
   try {
-    const decoded = jwt.verify(
-      token,
-      process.env.JWT_SECRET as string
-    ) as unknown as AuthUser;
+    const decoded = jwt.verify(token, process.env.JWT_SECRET!) as AuthUser;
     return decoded;
   } catch (err) {
     console.error("Error verificando token:", err);
@@ -29,6 +23,5 @@ export async function getUserFromCookies(): Promise<AuthUser | null> {
 export async function requireAdmin(): Promise<AuthUser | null> {
   const user = await getUserFromCookies();
   if (!user) return null;
-  if (user.role !== "admin") return null;
-  return user;
+  return user.role === "admin" ? user : null;
 }
