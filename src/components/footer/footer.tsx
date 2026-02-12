@@ -1,3 +1,5 @@
+import { Facebook, Instagram, MessageCircle } from "lucide-react";
+
 export default function Footer() {
   return (
     <footer className="bg-gray-900 text-gray-300 py-8 mt-10">
@@ -20,7 +22,7 @@ export default function Footer() {
             <ul className="space-y-1 text-sm">
               <li>📍 Dirección: Av. Enrique Bodereau 8409, Villa Rivera Indarte, Cordoba Capital</li>
               <li>📞 Tel: +5493516312848 / +5493515185458</li>
-              <li>📧 Email: -</li>
+              <li>📧 Email: aberturasbodereau1@gmail.com</li>
             </ul>
           </div>
 
@@ -28,9 +30,9 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold text-white mb-2">Redes Sociales</h3>
             <ul className="space-y-1 text-sm">
-              <li> <a href="https://www.facebook.com/share/1TnBW36eci/" target="_blank" rel="noopener noreferrer">🔗 Facebook</a></li>
-              <li> <a href="https://www.instagram.com/aberturas.bodereau?igsh=MW9wcno2bm50NmY4Mg==" target="_blank" rel="noopener noreferrer">🔗 Instagram</a></li>
-              <li> <a href="https://wa.me/5493516312848?text=Hola, estoy interesado/a en sus productos" target="_blank" rel="noopener noreferrer">🔗 WhatsApp</a></li>
+              <li className="flex items-center gap-2"><Facebook color="#ffffff" /> <a href="https://www.facebook.com/share/1TnBW36eci/" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+              <li className="flex items-center gap-2"><Instagram color="#ffffff" /> <a href="https://www.instagram.com/aberturas.bodereau?igsh=MW9wcno2bm50NmY4Mg==" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+              <li className="flex items-center gap-2"><MessageCircle color="#ffffff" /> <a href="https://wa.me/5493516312848?text=Hola, estoy interesado/a en sus productos" target="_blank" rel="noopener noreferrer"> WhatsApp</a></li>
             </ul> 
           </div>
         </div>

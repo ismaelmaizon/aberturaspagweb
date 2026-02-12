@@ -32,6 +32,8 @@ export async function POST(req: Request) {
     );
 
     const user = rows[0];
+    console.log("Usuario encontrado:", user);
+    console.log("Usuario encontrado:", user[0]);
     if (!user) {
       return NextResponse.json({ ok: false, message: "Credenciales inválidas" }, { status: 401 });
     }
@@ -72,7 +74,7 @@ export async function POST(req: Request) {
       path: "/",
       maxAge: 60 * 60 * 24,
     });
-
+    
     return res;
   } catch (error) {
     console.error("Error en login:", error);

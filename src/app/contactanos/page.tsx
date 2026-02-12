@@ -59,17 +59,17 @@ export default function ContactanosPage() {
                   <InfoRow
                     icon={<MapPin className="h-5 w-5" />}
                     title="Dirección"
-                    text="(Completá) Calle 123, Barrio, Córdoba"
+                    text="Av. Enrique Bodereau 8409, Villa Rivera Indarte, Cordoba Capital"
                   />
                   <InfoRow
                     icon={<Phone className="h-5 w-5" />}
                     title="Teléfono / WhatsApp"
-                    text="+54 9 351 764-1942"
+                    text="+5493516312848 / +5493515185458"
                   />
                   <InfoRow
                     icon={<Mail className="h-5 w-5" />}
                     title="Email"
-                    text="(Completá) ventas@tudominio.com"
+                    text="aberturasbodereau1@gmail.com"
                   />
                   <InfoRow
                     icon={<Clock className="h-5 w-5" />}
